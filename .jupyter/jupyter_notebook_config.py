@@ -491,7 +491,7 @@ c.NotebookApp.port = 8080
 #  culled.  Values of 0 or lower disable culling. The minimum timeout is 300
 #  seconds (5 minutes). Positive values less than the minimum value will be set
 #  to the minimum.
-#c.MappingKernelManager.cull_idle_timeout = 0
+c.MappingKernelManager.cull_idle_timeout = 1800
 
 ## The interval (in seconds) on which to check for idle kernels exceeding the
 #  cull timeout value.
