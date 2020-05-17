@@ -1,0 +1,19 @@
+" == General editor plugins ==
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter' "for git diff
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'itchyny/lightline.vim'
+
+" == Autocomplete plugins ==
+Plug 'ervandew/supertab'
+
+" == Color scheme ==
+Plug 'sjl/badwolf'
+Plug 'ap/vim-buftabline'
+Plug 'vim-airline/vim-airline'
+plug 'kien/ctrlp.vim' 
