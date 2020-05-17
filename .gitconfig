@@ -1,5 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-	name = V Chanikya Reddy
-	email = vchanikya.reddy@nxp.com
+    name = V Chanikya Reddy
+    email = vchanikya.reddy@nxp.com
+
+[core]
+    editor = vim
