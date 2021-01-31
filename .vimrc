@@ -23,6 +23,8 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_c_config_file = ".syntastic"
+let g:clang_library_path = "/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1"
 
 " == mxw/vim-jsx ==
 let g:jsx_ext_required = 0
@@ -48,6 +50,9 @@ set softtabstop=4
 set autoindent
 set smartindent
 
+" == Spell check
+set spelllang=en
+set spell
 "set noshiftround
 "set textwidth=79
 "set formatoptions=tcqrn1
@@ -68,7 +73,7 @@ function! XTermPasteBegin()
     return ""
 endfunction
 
-" == Theam ==
+" == Theme ==
 syntax on
 let g:molokai_original = 1
 let g:rehash256 = 1
@@ -81,7 +86,18 @@ colorscheme badwolf
 set number
 set hls
 
+" == set mapleader
+let mapleader = ";"
+
+" == Custom keybindings
+map <Leader>c :Commentary<CR>
+"nnoremap <C-/> :Commentary<CR>
+"inoremap <C-/> <ESC>:Commentary<CR>
+
 " == buffers switch ==
+map <Leader>j :bp<CR>
+map <Leader>k :bn<CR>
+map <Leader>h :bd<CR>
 "map <C-`> :bnext<CR>
 "nnoremap <C-`> :bnext<CR>
 "nnoremap <A-1> :1b<CR>

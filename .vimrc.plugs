@@ -16,4 +16,13 @@ Plug 'ervandew/supertab'
 Plug 'sjl/badwolf'
 Plug 'ap/vim-buftabline'
 Plug 'vim-airline/vim-airline'
-plug 'kien/ctrlp.vim' 
+
+" == js, react, jsx plugins
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+
+" == linter
+Plug 'vim-syntastic/syntastic'
