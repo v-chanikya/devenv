@@ -1,1 +1,4 @@
 .syntastic
+.clang_complete
+tags
+cscope*
