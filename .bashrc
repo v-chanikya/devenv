@@ -117,6 +117,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# set PATH to include racket
+if [ -d "/usr/local/racket/bin" ] ; then
+    export PATH="/usr/local/racket/bin:$PATH"
+fi
+
 # My custom commands
 cd data
 
