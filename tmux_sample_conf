@@ -1,0 +1,49 @@
+#!/bin/bash
+
+session="dmvpn"
+
+tmux start-server
+
+tmux new-session -d -s $session -n HOST1
+
+tmux send-keys -t $session:1 "ssh user@10.232.90.38" ENTER
+
+tmux new-window -t $session:2 -n ThinCPE1
+
+tmux send-keys -t $session:2 "ssh user@10.232.90.38" ENTER
+
+tmux send-keys -t $session:2 "minicom" ENTER
+
+tmux new-window -t $session:3 -n NHS
+
+tmux send-keys -t $session:3 "ssh user@10.232.91.134" ENTER
+
+tmux send-keys -t $session:3 "minicom -D /dev/ttyUSB0" ENTER
+
+tmux new-window -t $session:4 -n ThinCPE2
+
+tmux send-keys -t $session:4 "ssh user@10.232.91.134" ENTER
+
+tmux send-keys -t $session:4 "minicom" ENTER
+
+tmux new-window -t $session:5 -n HOST2
+
+tmux send-keys -t $session:5 "ssh user@10.232.91.134" ENTER
+
+tmux new-window -t $session:6 -n NHS_Client
+
+tmux send-keys -t $session:6 "ssh user@10.232.90.94" ENTER
+
+tmux new-window -t $session:7 -n Orchesterator
+
+tmux send-keys -t $session:7 "ssh user@10.232.91.154" ENTER
+
+tmux new-window -t $session:8 -n ISP
+
+tmux send-keys -t $session:8 "ssh user@10.232.91.154" ENTER
+
+tmux send-keys -t $session:8 "minicom" ENTER
+
+tmux select-window -t $session:1
+
+tmux attach-session -t $session
